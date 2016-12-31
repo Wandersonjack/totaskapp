@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_add:
                 final EditText editText= new EditText(this);
 
-                AlertDialog dialog = new AlertDialog.Builder(this)
+                AlertDialog dialog = new AlertDialog.Builder(this)                                  //dialogo que aparece ap
                         .setTitle("Adiconar novo task")
                         .setMessage("O que deseja adicionar? ")
                         .setView(editText)
@@ -80,5 +81,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //metodo que remove task
+    public void removeTask(View view){
+        View parent  = (View) view.getParent();
+
+        TextView task = (TextView) parent.findViewById(R.id.textView);
+        String taskText = String.valueOf(task.getText());
+
+        arrayAdapter.remove(taskText);
+        arrayAdapter.notifyDataSetChanged();
     }
 }

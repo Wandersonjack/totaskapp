@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="    match_parent">
-
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp">
 
     <TextView
         android:text="TextView"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="25dp"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
@@ -20,13 +20,15 @@
     <Button
         android:text="Done"
         android:textColor="@color/colorBranco"
-        android:background="@color/colorPrimary"
-        android:layout_width="wrap_content"
+        android:background="@drawable/forma_circular"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:id="@+id/button"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_alignTop="@+id/textView"
+        android:layout_marginRight="27dp"
+        android:layout_marginEnd="27dp"
+        android:onClick="removeTask"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
